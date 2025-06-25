@@ -5,9 +5,11 @@ import { ClientComponent } from "@/components/client";
 import { ServerComponent } from "@/components/server";
 import { getPokemons } from "@/utils/fetchpok";
 import { Suspense } from "react";
+import { getRandomPokemons } from "@/utils/fetchpok-random";
 
 export default async function Home() {
-  const pok = await getPokemons("ditto");
+  // const pok = await getPokemons("ditto");
+  const pok = await getRandomPokemons(); // Fetching a specific Pokémon
 
   // const time = await getTime();
 
